@@ -2,7 +2,10 @@
 
 #include <SFML/Graphics/Text.hpp>
 #include "State.h"
-#include "../Game.h"
+
+namespace sf {
+	class Time;
+}
 
 class IntroState : public State
 {
@@ -13,15 +16,14 @@ public:
 		_font.loadFromFile("arial.ttf");
 		_text.setFont(_font);
 		_text.setFillColor(sf::Color::White);
-		_text.setPosition(40, 40);
 		_text.setString("intro");
-		std::cout << "intro" << std::endl;
 	}
 
 	void pause() override;
 	void resume() override;
-	void update() override;
+	void update(const sf::Time&) override;
 	void draw() override;
+	~IntroState() override;
 private:
 	sf::Font _font;
 	sf::Text _text;
