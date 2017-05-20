@@ -155,6 +155,7 @@
     <ClInclude Include="Entities\Ball.h" />
     <ClInclude Include="Entities\Entity.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="States\EventMap.h" />
     <ClInclude Include="States\IntroState.h" />
     <ClInclude Include="States\State.h" />
     <ClInclude Include="States\StateMachine.h" />

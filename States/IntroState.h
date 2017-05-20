@@ -2,6 +2,8 @@
 
 #include <SFML/Graphics/Text.hpp>
 #include "State.h"
+#include <SFML/Window/Event.hpp>
+#include "EventMap.h"
 
 namespace sf {
 	class Time;
@@ -10,14 +12,7 @@ namespace sf {
 class IntroState : public State
 {
 public:
-	IntroState(StateMachine& machine, sf::RenderWindow& window, bool replace)
-	: State(machine, window, replace)
-	{
-		_font.loadFromFile("arial.ttf");
-		_text.setFont(_font);
-		_text.setFillColor(sf::Color::White);
-		_text.setString("intro");
-	}
+	IntroState(StateMachine& machine, sf::RenderWindow& window, bool replace);
 
 	void pause() override;
 	void resume() override;
@@ -25,6 +20,8 @@ public:
 	void draw() override;
 	~IntroState() override;
 private:
+	EventMap _events;
+	sf::Event _event;
 	sf::Font _font;
 	sf::Text _text;
 };
