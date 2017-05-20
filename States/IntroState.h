@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 #include <SFML/Graphics/Text.hpp>
-#include "State.h"
 #include <SFML/Window/Event.hpp>
+#include "State.h"
 #include "EventMap.h"
 
 namespace sf {
@@ -17,7 +17,7 @@ public:
 	void pause() override;
 	void resume() override;
 	void update(const sf::Time&) override;
-	void draw() override;
+	void draw() const override;
 	~IntroState() override;
 private:
 	EventMap _events;

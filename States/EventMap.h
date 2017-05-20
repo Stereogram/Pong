@@ -1,8 +1,7 @@
 ﻿#pragma once
-#include <map>
 #include <SFML/Window/Event.hpp>
 #include <functional>
-#include "State.h"
+#include <unordered_map>
 
 
 class EventMap
@@ -23,5 +22,5 @@ public:
 
 private:
 	
-	std::map <sf::Event::EventType, std::function<void(sf::Event&)>> _map;
+	std::unordered_map<sf::Event::EventType, std::function<void(sf::Event&)>,std::hash<sf::Event::EventType>> _map;
 };

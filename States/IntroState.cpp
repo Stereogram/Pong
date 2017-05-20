@@ -30,7 +30,7 @@ void IntroState::update(const sf::Time& dt)
 	}
 }
 
-void IntroState::draw()
+void IntroState::draw() const
 {
 	_window.clear(sf::Color::Black);
 	_window.draw(_text);

@@ -22,7 +22,7 @@ public:
 	virtual void resume() = 0;
 
 	virtual void update(const sf::Time&) = 0;
-	virtual void draw() = 0;
+	virtual void draw()const = 0;
 
 	auto next() { return std::move(_next); }
 	auto isReplacing() { return _replacing; }
