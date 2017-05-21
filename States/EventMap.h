@@ -12,8 +12,9 @@ public:
 	void Register(sf::Event::EventType e, std::function<void(sf::Event&)> f) { _map[e] = f; }
 	void Invoke(sf::Event& e)
 	{
-		if(_map.find(e.type) != _map.end())
-			std::invoke(_map[e.type], e);
+		auto it = _map.find(e.type);
+		if(it != _map.end())
+			std::invoke(it->second, e);
 	}
 	void Clear() { _map.clear(); }
 

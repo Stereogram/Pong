@@ -149,6 +149,7 @@
     <ClCompile Include="Entities\Entity.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="States\IntroState.cpp" />
+    <ClCompile Include="States\PlayState.cpp" />
     <ClCompile Include="States\StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +158,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="States\EventMap.h" />
     <ClInclude Include="States\IntroState.h" />
+    <ClInclude Include="States\PlayState.h" />
     <ClInclude Include="States\State.h" />
     <ClInclude Include="States\StateMachine.h" />
   </ItemGroup>

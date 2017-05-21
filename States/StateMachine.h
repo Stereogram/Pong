@@ -18,13 +18,6 @@ public:
 	bool running() const { return _running; }
 	void quit() { _running = false; }
 
-	template <typename T>
-	static std::unique_ptr<T> build(StateMachine& machine, sf::RenderWindow& window, bool replace)
-	{
-		return std::unique_ptr<T>(new T(machine, window, replace));
-	}
-
-
 private:
 	bool _resume = false;
 	bool _running = false;

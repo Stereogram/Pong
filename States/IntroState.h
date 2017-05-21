@@ -1,9 +1,7 @@
 ﻿#pragma once
 
 #include <SFML/Graphics/Text.hpp>
-#include <SFML/Window/Event.hpp>
 #include "State.h"
-#include "EventMap.h"
 
 namespace sf {
 	class Time;
@@ -20,8 +18,6 @@ public:
 	void draw() const override;
 	~IntroState() override;
 private:
-	EventMap _events;
-	sf::Event _event;
 	sf::Font _font;
 	sf::Text _text;
 };

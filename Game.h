@@ -11,7 +11,7 @@ public:
 	{
 		_window.create(sf::VideoMode{ 720, 480 }, "Pong", sf::Style::Titlebar | sf::Style::Close);
 
-		_machine.run(StateMachine::build<IntroState>(_machine, _window, true));
+		_machine.run(std::make_unique<IntroState>(_machine, _window, true));
 	}
 	
 	void run()

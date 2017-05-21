@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include <SFML/System/Time.hpp>
+#include "EventMap.h"
 
 class StateMachine;
 namespace sf
@@ -28,6 +29,8 @@ public:
 	auto isReplacing() { return _replacing; }
 
 protected:
+	EventMap _events;
+	sf::Event _event;
 	StateMachine& _machine;
 	sf::RenderWindow& _window;
 	bool _replacing;

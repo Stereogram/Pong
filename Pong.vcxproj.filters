@@ -30,6 +30,9 @@
     <ClCompile Include="States\IntroState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="States\PlayState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="States\StateMachine.h">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="States\EventMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="States\PlayState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
